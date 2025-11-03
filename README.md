@@ -17,5 +17,5 @@ It allows students to enter their grades across multiple semesters and calculate
 4. After all semesters are entered, it calculates the general GPA and displays it with a motivational message.
 
 🚀 Future Improvements
-Save GPA history to a file for tracking progress.
-Create a GUI version using JavaFX or Swing.
+- Save GPA history to a file for tracking progress.
+- Create a GUI version using JavaFX or Swing.
