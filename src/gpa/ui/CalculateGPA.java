@@ -78,13 +78,29 @@ public class CalculateGPA {
             }
         
         }
-
+        
+        // Calculate and display overall GPA, semesters, and total courses
         if (totalCourses > 0) {
             double gpa = totalPoints / totalCourses;
             System.out.printf("\n== Your overall GPA is: %.2f%n", gpa);
-            System.out.println("== Your letter GPA is: " + Letter.fromGpa(gpa) + "\n\n");
+            System.out.println("== Your letter GPA is: " + Letter.fromGpa(gpa) + "\n");
+            System.out.println("==Total semesters you have taken: " + semesters);
+            System.out.println("==Total courses taken: " + totalCourses + "\n");
         } else {
             System.out.println("No courses found.");
         }
+
+        System.out.print("Do you want to calculate another GPA? (y/n): ");
+        char again = in.next().toLowerCase().charAt(0);
+        if (again == 'y') {
+            calculateGPA(in);
+        }
+        else {
+            System.out.println("Thank you for using the GPA Calculator. Goodbye!");
+            System.exit(0);
+        }
+
     }
+        
 }
+
