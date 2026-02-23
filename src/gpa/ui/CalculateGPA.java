@@ -63,12 +63,12 @@ public class CalculateGPA {
 
             // Loop through each class in the semester
             for (int j = 1; j <= classes; j++) {
-                System.out.print("Enter the letter grade for your " + j + Ordinal.format(j) + " class (A, B, C, D, F): ");
+                System.out.print("Enter the letter grade for your " + Ordinal.format(j) + " class (A, B, C, D, F): ");
                 String input = in.next().toUpperCase();
                 char grade;
                 while (!input.matches("[A-F]")) {
                     System.out.println("Incorrect input. Please enter a valid letter grade (A-F)");
-                    System.out.print("Enter the letter grade for your " + j + Ordinal.format(j) + " class (A, B, C, D, F): ");
+                    System.out.print("Enter the letter grade for your " + Ordinal.format(j) + " class (A, B, C, D, F): ");
                     input = in.next().toUpperCase();
                 }
                 grade = input.charAt(0);
@@ -95,9 +95,13 @@ public class CalculateGPA {
         if (again == 'y') {
             calculateGPA(in);
         }
-        else {
+        else if (again == 'n') {
             System.out.println("Thank you for using the GPA Calculator. Goodbye!");
             System.exit(0);
+        }
+        else {
+            System.out.println("Invalid input. Please enter 'y' or 'n'.");
+            calculateGPA(in);
         }
 
     }
